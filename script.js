@@ -48,17 +48,21 @@ function isValidEmail(email) {
 
 // Инициализация Swiper после загрузки DOM
 
-  const swiper = new Swiper('.mySwiper', {
-    navigation: {
-     nextEl: '.mySwiper .swiper-button-next',
-     prevEl: '.mySwiper .swiper-button-prev',
-    },
-  });
+document.addEventListener('DOMContentLoaded', function() {
+    const swiper = new Swiper('.mySwiper', {
+        navigation: {
+            nextEl: '.mySwiper .swiper-button-next',
+            prevEl: '.mySwiper .swiper-button-prev',
+        },
+    });
 
-  const swiper2 = new Swiper('.mySwiper2', {
-    navigation: {
-     nextEl: '.mySwiper2 .swiper-button-next',
-     prevEl: '.mySwiper2 .swiper-button-prev',
-    },
-  });
+    const swiper2 = new Swiper('.mySwiper2', {
+        navigation: {
+            nextEl: '.mySwiper2 .swiper-button-next',
+            prevEl: '.mySwiper2 .swiper-button-prev',
+        },
+    });
+});
+
+
 
