@@ -421,6 +421,46 @@ body {
     height: auto;
   }
   
+  
+
+
+.swiper {
+    width: 100%;
+    height: 300px; /* Настройте высоту по необходимости */
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    color: #007bff; /* цвет стрелок */
+}
+
+.festivals-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Адаптивная сетка */
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.festival {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.festival img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
 
 
 @font-face {

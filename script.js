@@ -33,17 +33,17 @@ window.addEventListener('click', (event) => {
 const bookingForm = document.getElementById('bookingForm');
 bookingForm.addEventListener('submit', handleSubmit);
 
-function handleSubmit(event) {
- // ... (ваш код обработки формы) ...
-}
+// function handleSubmit(event) {
+//  // ... (ваш код обработки формы) ...
+// }
 
-function validateForm() {
- // ... (ваш код валидации) ...
-}
+// function validateForm() {
+//  // ... (ваш код валидации) ...
+// }
 
-function isValidEmail(email) {
- // ... (ваш код проверки email) ...
-}
+// function isValidEmail(email) {
+//  // ... (ваш код проверки email) ...
+// }
 
 
 // Инициализация Swiper после загрузки DOM
@@ -63,6 +63,5 @@ document.addEventListener('DOMContentLoaded', function() {
         },
     });
 });
-
 
 
