@@ -1,0 +1,434 @@
+/* Общие стили */
+body {
+    font-family: 'Arial', sans-serif; /* Выберите подходящий шрифт */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Улучшаем читаемость */
+    background-color: #f4f4f4; /* Светло-серый фон */
+    color: #333; /* Темно-серый текст */
+  }
+  
+  h1, h2, h3 {
+    font-family: "FETesto-Regular";
+    font-weight: bold;
+    color: #222; /* Более темный заголовок */
+  }
+  
+  h1 {
+    font-size: 2.5em;
+  }
+  
+  h2 {
+    font-size: 2em;
+  }
+  
+  h3 {
+    font-size: 1.5em;
+  }
+  
+  a {
+    color: #007bff; /* Синяя ссылка */
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .button {
+    background-color: #007bff; /* Синяя кнопка */
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px; /* Скругленные углы */
+    cursor: pointer;
+  }
+  
+  
+  /* Стили для header */
+  header {
+    background-color: #fff; /* Белый фон header */
+    padding: 1em 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Тень */
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Центрируем меню */
+  }
+  
+  nav li {
+    display: inline-block;
+    margin: 0 1em;
+  }
+  
+  .burger-menu {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  
+  .burger-menu .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: 0.3s;
+  }
+  
+  .burger-menu.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+  }
+  
+  .burger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .burger-menu.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  /* Адаптивный дизайн */
+  @media (max-width: 768px) {
+    nav ul {
+      display: none;
+    }
+    .burger-menu {
+      display: block;
+    }
+    nav ul.active {
+      display: block;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      text-align: center;
+    }
+    nav ul.active li {
+      display: block;
+      margin: 10px 0;
+    }
+  }
+  
+  
+  /* Стили для main */
+  main {
+    padding: 2em;
+  }
+  
+  
+  /* Стили для секций */
+  .hero {
+    text-align: center;
+    background-image: url('hero-image.jpg'); /* Задний фон */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 4em 0;
+  }
+  
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Адаптивная сетка */
+    grid-gap: 2em;
+  }
+  
+  .feature {
+    text-align: center;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+  }
+  
+  .testimonials {
+    padding: 2em 0;
+  }
+  
+  .testimonial {
+    border: 1px solid #ddd;
+    padding: 1em;
+    margin-bottom: 1em;
+    background-color: white;
+  }
+  
+  /* Стили для footer */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+  }
+
+
+/* Стили для формы */
+#bookingForm {
+    max-width: 500px; /* Максимальная ширина формы */
+    margin: 2em auto; /* Центрирование формы */
+    padding: 2em;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Тень */
+  }
+  
+  #bookingForm label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+  }
+  
+  #bookingForm input,
+  #bookingForm textarea {
+    width: 100%;
+    padding: 0.8em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Убираем проблему с паддингом */
+  }
+  
+  #bookingForm textarea {
+    height: 10em; /* Высота textarea */
+  }
+  
+  #bookingForm button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Плавный переход цвета при наведении */
+  }
+  
+  #bookingForm button[type="submit"]:hover {
+    background-color: #0069d9; /* Более темный цвет при наведении */
+  }
+  
+  
+  /* Стили для модального окна (если используется) */
+  #bookingModal {
+   display: none; /* Скрыто по умолчанию */
+   position: fixed; /* Фиксированное положение */
+   z-index: 1; /* Наложение поверх других элементов */
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   overflow: auto; /* Добавляем прокрутку, если контент больше экрана */
+   background-color: rgba(0,0,0,0.4); /* Полупрозрачный черный фон */
+  }
+  
+  .modal-content {
+   background-color: #fefefe;
+   margin: 15% auto;
+   padding: 20px;
+   border: 1px solid #888;
+   width: 30%;
+   border-radius: 5px;
+  }
+  
+  .close-modal {
+   color: #aaa;
+   float: right;
+   font-size: 28px;
+   font-weight: bold;
+  }
+  
+  .close-modal:hover,
+  .close-modal:focus {
+   color: black;
+   text-decoration: none;
+   cursor: pointer;
+  }
+  
+/* Стили для модального окна */
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Фиксированное положение */
+    z-index: 1; /* Наложение поверх других элементов */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Добавляем прокрутку, если контент больше экрана */
+    background-color: rgba(0,0,0,0.4); /* Полупрозрачный черный фон */
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Автоматическое центрирование */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ширина модального окна */
+    max-width: 600px; /* Максимальная ширина */
+    border-radius: 5px;
+  }
+  
+  .close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close-modal:hover,
+  .close-modal:focus {
+    color: black;
+    text-decoration: none;
+  }
+
+.teachers-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Адаптивная сетка */
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.teacher {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #fff;
+}
+
+.teacher img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.price-list table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 16px;
+}
+
+.price-list th,
+.price-list td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.price-list th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.price-list tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.booking-section {
+    text-align: center;
+    margin-top: 2em;
+}
+
+.booking-section .button {
+    display: inline-block;
+    padding: 1em 2em;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.about-us {
+    padding: 20px;
+    line-height: 1.6;
+  }
+  
+  .about-us h2 {
+    margin-bottom: 1em;
+  }
+  
+  .about-us p {
+    margin-bottom: 1em;
+  }
+  
+  .booking-section {
+    text-align: center;
+    margin-top: 2em;
+  }
+  
+  .booking-section .button {
+    display: inline-block;
+    padding: 1em 2em;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+/* ... (предыдущий код) ... */
+
+.reviews-section {
+    padding: 20px;
+  }
+  
+  .review {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .review blockquote {
+    margin: 0;
+  }
+  
+  .review p {
+    text-align: right;
+    font-style: italic;
+    margin-top: 5px;
+  }
+  
+/* ... (предыдущий код) ... */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+  }
+  
+  .gallery-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .gallery img, .gallery video {
+    max-width: 100%;
+    height: auto;
+  }
+  
+
+
+@font-face {
+    font-family: "FETesto-Regular";
+    src: url("fonts/FETesto-Regular.ttf")
+    format("truetype");
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  

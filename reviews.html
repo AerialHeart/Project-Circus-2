@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы - Центр Воздушной Гимнастики и Акробатики</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!-- Навигационное меню (такое же, как на главной странице) -->
+        <nav>
+            <div class="burger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="teachers.html">Педагоги</a></li>
+                <li><a href="prices.html">Прайс</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="gallery.html">Фото и видео</a></li>
+                <li><a href="festivals.html">Фестивали</a></li>
+            </ul>
+        </nav>
+        <h1>Отзывы</h1>
+    </header>
+
+    <main>
+        <section class="reviews-section">
+            <h2>Отзывы наших клиентов:</h2>
+            <div class="review">
+                <blockquote>"Отличный центр!  Преподаватели профессионалы, атмосфера дружелюбная, рекомендую!"</blockquote>
+                <p>- Иван Петров</p>
+            </div>
+            <div class="review">
+                <blockquote>"Занимаюсь здесь уже полгода, очень довольна результатами! Спасибо!"</blockquote>
+                <p>- Анна Сидорова</p>
+            </div>
+            <!-- Добавить еще отзывы -->
+        </section>
+
+        <section class="booking-section">
+            <h2>Оставить отзыв</h2>
+            <button id="openModalButton" class="button">Оставить отзыв</button>
+        </section>
+
+        <!-- Модальное окно -->
+        <div id="bookingModal" class="modal">
+          <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Оставить отзыв</h2>
+            <form id="bookingForm">
+              <textarea id="message" placeholder="Ваш отзыв" required></textarea>
+              <button type="submit">Отправить</button>
+            </form>
+          </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Центр Воздушной Гимнастики и Акробатики</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

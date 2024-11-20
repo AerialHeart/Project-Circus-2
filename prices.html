@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прайс - Центр Воздушной Гимнастики и Акробатики</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!-- Навигационное меню (такое же, как на главной странице) -->
+        <nav>
+            <div class="burger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="teachers.html">Педагоги</a></li>
+                <li><a href="prices.html">Прайс</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="gallery.html">Фото и видео</a></li>
+                <li><a href="festivals.html">Фестивали</a></li>
+            </ul>
+        </nav>
+        <h1>Прайс-лист</h1>
+    </header>
+
+    <main>
+        <section class="price-list">
+            <h2>Цены на услуги:</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Услуга</th>
+                        <th>Цена (руб.)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Групповые занятия (взрослые)</td>
+                        <td>2000</td>
+                    </tr>
+                    <tr>
+                        <td>Групповые занятия (дети)</td>
+                        <td>1500</td>
+                    </tr>
+                    <tr>
+                        <td>Индивидуальные занятия (взрослые)</td>
+                        <td>3000</td>
+                    </tr>
+                    <tr>
+                        <td>Индивидуальные занятия (дети)</td>
+                        <td>2500</td>
+                    </tr>
+                    <tr>
+                        <td>Абонемент на месяц (группа, взрослые)</td>
+                        <td>7000</td>
+                    </tr>
+                    <tr>
+                        <td>Абонемент на месяц (группа, дети)</td>
+                        <td>5000</td>
+                    </tr>
+                    <!-- Добавьте еще услуги -->
+                </tbody>
+            </table>
+        </section>
+
+        <section class="booking-section">
+            <h2>Записаться на занятие</h2>
+            <a href="#" class="button" id="openModalButton">Записаться на пробное занятие</a>
+        </section>
+    
+          <!-- Модальное окно (такое же как на главной странице) -->
+        <div id="bookingModal" class="modal">
+            <div class="modal-content">
+              <span class="close-modal">&times;</span>
+              <h2>Запись на пробное занятие</h2>
+              <form id="bookingForm">
+                <input type="text" id="name" placeholder="Ваше имя" required>
+                <input type="email" id="email" placeholder="Ваш email" required>
+                <input type="tel" id="phone" placeholder="Ваш телефон" required>
+                <textarea id="message" placeholder="Ваше сообщение"></textarea>
+                <button type="submit">Отправить</button>
+              </form>
+            </div>
+        </div>
+
+        <form id="bookingForm">
+            <input type="text" id="name" placeholder="Ваше имя" required>
+            <input type="email" id="email" placeholder="Ваш email" required>
+            <input type="tel" id="phone" placeholder="Ваш телефон" required>
+            <textarea id="message" placeholder="Ваше сообщение"></textarea>
+            <button type="submit">Отправить</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Центр Воздушной Гимнастики и Акробатики</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+

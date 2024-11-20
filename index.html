@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Центр Воздушной Гимнастики и Акробатики</title>
+    <link rel="stylesheet" href="style.css">  <!-- Подключаем CSS файл -->
+    <script src="script.js"></script>  <!-- Подключаем JavaScript файл -->
+</head>
+<body>
+
+    <header>
+        <nav>
+            <!-- Бургер-меню (стилизуется в CSS) -->
+            <div class="burger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="teachers.html">Педагоги</a></li>
+                <li><a href="prices.html">Прайс</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="gallery.html">Фото и видео</a></li>
+                <li><a href="festivals.html">Фестивали</a></li>
+            </ul>
+        </nav>
+        <h1>Центр Воздушной Гимнастики и Акробатики</h1>
+        <p class="tagline">Поднимитесь на новую высоту!</p>  <!-- Добавлен слоган -->
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="hero-image.jpg" alt="Фотография воздушных гимнастов">
+            <h2>Добро пожаловать в наш Центр!</h2>
+            <p>Мы предлагаем высококачественные курсы воздушной гимнастики и акробатики для всех возрастов и уровней подготовки.  Наши опытные инструкторы помогут вам освоить новые навыки, повысить физическую форму и обрести уверенность в себе.</p>
+            <a href="#" class="button">Записаться на пробное занятие</a> <!-- Кнопка -->
+        </section>
+
+                <!-- Модальное окно -->
+        <div id="bookingModal" class="modal">
+            <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Запись на пробное занятие</h2>
+            <form id="bookingForm">
+                <input type="text" id="name" placeholder="Ваше имя" required>
+                <input type="email" id="email" placeholder="Ваш email" required>
+                <input type="tel" id="phone" placeholder="Ваш телефон" required>
+                <textarea id="message" placeholder="Ваше сообщение"></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+            </div>
+        </div>
+
+        <section class="features">
+            <h2>Наши преимущества:</h2>
+            <div class="feature">
+                <img src="icon-experience.png" alt="Опыт">
+                <h3>Опытные инструкторы</h3>
+                <p>Наши преподаватели — профессионалы с многолетним опытом работы.</p>
+            </div>
+            <div class="feature">
+                <img src="icon-safety.png" alt="Безопасность">
+                <h3>Безопасность</h3>
+                <p>Мы обеспечиваем безопасность наших учеников, используя современное оборудование и методики обучения.</p>
+            </div>
+            <div class="feature">
+                <img src="icon-individual.png" alt="Индивидуальный подход">
+                <h3>Индивидуальный подход</h3>
+                <p>Мы подбираем индивидуальные программы обучения, учитывая ваши потребности и цели.</p>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <h2>Отзывы наших учеников:</h2>
+            <!-- Здесь будут отзывы -->
+            <div class="testimonial">
+                <p>"Занятия в центре - это настоящее удовольствие!  Я нашла здесь новых друзей и открыла в себе новые возможности."</p>
+                <p>- Анна С.</p>
+            </div>
+            <!-- Добавить еще отзывы -->
+        </section>
+
+        <form id="bookingForm">
+            <input type="text" id="name" placeholder="Ваше имя" required>
+            <input type="email" id="email" placeholder="Ваш email" required>
+            <input type="tel" id="phone" placeholder="Ваш телефон" required>
+            <textarea id="message" placeholder="Ваше сообщение"></textarea>
+            <button type="submit">Отправить</button>
+        </form>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Центр Воздушной Гимнастики и Акробатики</p>
+    </footer>
+
+
+</body>
+</html>
