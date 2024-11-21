@@ -54,17 +54,27 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Тень */
   }
   
+  nav {
+    position: relative;
+  }
+  
   nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    text-align: center; /* Центрируем меню */
+    text-align: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    display:block;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
   
-  nav li {
-    display: inline-block;
-    margin: 0 1em;
-  }
+  nav ul.show { display: block; }
+  
+  nav li { display: inline-block; margin: 0 1em; }
   
   .burger-menu {
     display: none;
@@ -94,28 +104,41 @@ body {
     transform: rotate(-45deg) translate(5px, -5px);
   }
   
-  /* Адаптивный дизайн */
   @media (max-width: 768px) {
     nav ul {
-      display: none;
-    }
-    .burger-menu {
-      display: block;
-    }
-    nav ul.active {
-      display: block;
       position: absolute;
       top: 100%;
       left: 0;
       width: 100%;
       background-color: #fff;
       text-align: center;
+      display: none;
     }
-    nav ul.active li {
-      display: block;
-      margin: 10px 0;
-    }
+  
+    nav ul.show { display: block; }
+  
+    .burger-menu { display: block; }
+    nav li { display: block; margin: 10px 0; }
   }
+  
+  /* Стиль для кнопки "Наверх" */
+  .scrollTopButton {
+    display:none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    z-index: 100;
+  }
+  
+  .scrollTopButton:hover { opacity: 1; }
   
   
   /* Стили для main */
@@ -416,12 +439,15 @@ body {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   }
   
-  .gallery img, .gallery video {
+  .gallery img {
     max-width: 100%;
     height: auto;
   }
   
-  
+  .gallery video {
+    max-width: auto;
+    height: 100%;
+  }
 
 
 .swiper {

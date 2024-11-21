@@ -3,8 +3,23 @@ const burgerMenu = document.querySelector('.burger-menu');
 const navUl = document.querySelector('nav ul');
 
 burgerMenu.addEventListener('click', () => {
-  navUl.classList.toggle('active');
+  navUl.classList.toggle('show');
   burgerMenu.classList.toggle('active');
+});
+
+// Кнопка "Наверх"
+const scrollTopButton = document.getElementById('scrollTopButton');
+
+window.addEventListener('scroll', () => {
+  if (scrollY > 100) {
+    scrollTopButton.style.display = "block";
+  } else {
+    scrollTopButton.style.display = "none";
+  }
+});
+
+scrollTopButton.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
 // Обработчик события для кнопки "Записаться на пробное занятие"
