@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Фото и видео - Центр Воздушной Гимнастики и Акробатики</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
 </head>
 <body>
     <header>
@@ -28,39 +26,52 @@
                 <li><a href="festivals.html">Фестивали</a></li>
             </ul>
         </nav>
-        <h1>Фото и видео</h1>
+
     </header>
 
     <main>
+        <h2>Фотографии</h2>
         <section class="gallery">
-            <h2>Фотографии:</h2>
+            
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="img/1.jfif" alt="Фотография 1"></div>
-                    <div class="swiper-slide"><img src="img/2.jfif" alt="Фотография 2"></div>
-                    <div class="swiper-slide"><img src="img/3.jpg" alt="Фотография 3"></div>
-                    <!-- Добавить еще фотографии -->
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
-            <br>
+                    <div class="swiper-slide"><img src="img/1.jpg" alt="Фото 1"></div>
+                    <div class="swiper-slide"><img src="img/2.jpg" alt="Фото 2"></div>
+                    <div class="swiper-slide"><img src="img/3.jpg" alt="Фото 3"></div>
+                    <div class="swiper-slide"><img src="img/4.jpg" alt="Фото 4"></div>
+                    <div class="swiper-slide"><img src="img/5.jpg" alt="Фото 5"></div>
+                    <div class="swiper-slide"><img src="img/6.jpg" alt="Фото 6"></div>
+                    <div class="swiper-slide"><img src="img/7.jpg" alt="Фото 7"></div>
+                    <div class="swiper-slide"><img src="img/8.jpg" alt="Фото 8"></div>
 
-            <h2>Видео:</h2>
-            <div class="swiper mySwiper2"> <div class="swiper-wrapper">
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </section>
+        
+        <h2>Видео</h2>
+        <section class="gallery">
+            
+            <div class="swiper mySwiper2">
+                <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <video width="320" height="240" controls>
-                            <source src="video1.mp4" type="video/mp4">
+                        <video width="240" height="420" controls>
+                            <source src="vid/1.mp4" type="video/mp4">
                             Ваш браузер не поддерживает видео.
                         </video>
                     </div>
-                    <!-- Добавить еще видео -->
+                    <div class="swiper-slide">
+                        <video width="240" height="420" controls>
+                            <source src="vid/2.mp4" type="video/mp4">
+                            Ваш браузер не поддерживает видео.
+                        </video>
+                    </div>
                 </div>
-                <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </section>
-
 
         <section class="booking-section">
             <h2>Записаться на занятие</h2>
@@ -69,17 +80,17 @@
 
         <!-- Модальное окно -->
         <div id="bookingModal" class="modal">
-          <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2>Запись на пробное занятие</h2>
-            <form id="bookingForm">
-              <input type="text" id="name" placeholder="Ваше имя" required>
-              <input type="email" id="email" placeholder="Ваш email" required>
-              <input type="tel" id="phone" placeholder="Ваш телефон" required>
-              <textarea id="message" placeholder="Ваше сообщение"></textarea>
-              <button type="submit">Отправить</button>
-            </form>
-          </div>
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Запись на пробное занятие</h2>
+                <form id="bookingForm">
+                    <input type="text" id="name" placeholder="Ваше имя" required>
+                    <input type="email" id="email" placeholder="Ваш email" required>
+                    <input type="tel" id="phone" placeholder="Ваш телефон" required>
+                    <textarea id="message" placeholder="Ваше сообщение"></textarea>
+                    <button type="submit">Отправить</button>
+                </form>
+            </div>
         </div>
 
     </main>
@@ -87,8 +98,9 @@
     <footer>
         <p>&copy; 2023 Центр Воздушной Гимнастики и Акробатики</p>
     </footer>
-
+    <button id="scrollTopButton" class="scrollTopButton">Наверх</button>
+    <script src="swiper-bundle.min.js"></script>
     <script src="script.js"></script>
-
 </body>
 </html>
+

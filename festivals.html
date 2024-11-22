@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фестивали - Центр Воздушной Гимнастики и Акробатики</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="burger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="teachers.html">Педагоги</a></li>
+                <li><a href="prices.html">Прайс</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="gallery.html">Фото и видео</a></li>
+                <li><a href="festivals.html">Фестивали</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <h2>Наши фестивали</h2>
+        <section class="festivals-list">
+            
+            <div class="festival">
+                <img src="festival1.jpg" alt="Фестиваль 1">
+                <h3>Название фестиваля 1</h3>
+                <p>Дата: 2023-10-27</p>
+                <p>Краткое описание фестиваля 1.</p>
+            </div>
+            <div class="festival">
+                <img src="festival2.jpg" alt="Фестиваль 2">
+                <h3>Название фестиваля 2</h3>
+                <p>Дата: 2023-11-15</p>
+                <p>Краткое описание фестиваля 2.</p>
+            </div>
+            <!-- Добавьте еще фестивали -->
+        </section>
+
+        <section class="booking-section">
+            <h2>Записаться на занятие</h2>
+            <button id="openModalButton" class="button">Записаться на пробное занятие</button>
+        </section>
+
+        <!-- Модальное окно (такое же, как на других страницах) -->
+        <div id="bookingModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Запись на пробное занятие</h2>
+                <form id="bookingForm">
+                    <input type="text" id="name" placeholder="Ваше имя" required>
+                    <input type="email" id="email" placeholder="Ваш email" required>
+                    <input type="tel" id="phone" placeholder="Ваш телефон" required>
+                    <textarea id="message" placeholder="Ваше сообщение"></textarea>
+                    <button type="submit">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Центр Воздушной Гимнастики и Акробатики</p>
+    </footer>
+    <button id="scrollTopButton" class="scrollTopButton">Наверх</button>
+    <script src="script.js"></script>
+</body>
+</html>
+

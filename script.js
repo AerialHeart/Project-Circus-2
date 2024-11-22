@@ -3,8 +3,23 @@ const burgerMenu = document.querySelector('.burger-menu');
 const navUl = document.querySelector('nav ul');
 
 burgerMenu.addEventListener('click', () => {
-  navUl.classList.toggle('active');
+  navUl.classList.toggle('show');
   burgerMenu.classList.toggle('active');
+});
+
+// Кнопка "Наверх"
+const scrollTopButton = document.getElementById('scrollTopButton');
+
+window.addEventListener('scroll', () => {
+  if (scrollY > 100) {
+    scrollTopButton.style.display = "block";
+  } else {
+    scrollTopButton.style.display = "none";
+  }
+});
+
+scrollTopButton.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
 // Обработчик события для кнопки "Записаться на пробное занятие"
@@ -33,17 +48,17 @@ window.addEventListener('click', (event) => {
 const bookingForm = document.getElementById('bookingForm');
 bookingForm.addEventListener('submit', handleSubmit);
 
-function handleSubmit(event) {
- // ... (ваш код обработки формы) ...
-}
+ function handleSubmit(event) {
+  // ... (ваш код обработки формы) ...
+ }
 
-function validateForm() {
- // ... (ваш код валидации) ...
-}
+ function validateForm() {
+  // ... (ваш код валидации) ...
+ }
 
-function isValidEmail(email) {
+ function isValidEmail(email) {
  // ... (ваш код проверки email) ...
-}
+ }
 
 
 // Инициализация Swiper после загрузки DOM
@@ -63,6 +78,5 @@ document.addEventListener('DOMContentLoaded', function() {
         },
     });
 });
-
 
 
