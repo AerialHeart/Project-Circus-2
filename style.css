@@ -155,17 +155,20 @@ body {
   /* Стили для main */
   main {
     padding: 2em;
+    background: linear-gradient(to right bottom, rgba(120, 120, 120, 1), rgba(200, 200, 200, 1));
   }
   
   
   /* Стили для секций */
   .hero {
     text-align: center;
-    background-image: url('hero-image.jpg'); /* Задний фон */
+    background-image: url("img/slogan.png"); /* Задний фон */
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
+    
     color: white;
-    padding: 4em 0;
+    padding: 10em 0;
   }
   
   .features {
