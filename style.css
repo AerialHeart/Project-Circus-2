@@ -29,7 +29,7 @@ body {
   }
   
   a {
-    color: #007bff; /* Синяя ссылка */
+    color: #F25862; /* Красная ссылка */
     text-decoration: none;
   }
   
@@ -38,7 +38,7 @@ body {
   }
   
   .button {
-    background-color: #007bff; /* Синяя кнопка */
+    background-color: #F25862; /* красная кнопка */
     color: white;
     padding: 10px 20px;
     text-align: center;
@@ -139,7 +139,7 @@ body {
     bottom: 20px;
     right: 20px;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #F25862;
     color: white;
     border: none;
     border-radius: 5px;
@@ -236,7 +236,7 @@ body {
   }
   
   #bookingForm button[type="submit"] {
-    background-color: #007bff;
+    background-color: #F25862;
     color: white;
     padding: 1em 2em;
     border: none;
@@ -246,7 +246,7 @@ body {
   }
   
   #bookingForm button[type="submit"]:hover {
-    background-color: #0069d9; /* Более темный цвет при наведении */
+    background-color: #803035; /* Более темный цвет при наведении */
   }
   
   
@@ -378,7 +378,7 @@ body {
 .booking-section .button {
     display: inline-block;
     padding: 1em 2em;
-    background-color: #007bff;
+    background-color: #F25862;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -405,7 +405,7 @@ body {
   .booking-section .button {
     display: inline-block;
     padding: 1em 2em;
-    background-color: #007bff;
+    background-color: #F25862;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -477,6 +477,7 @@ body {
 } */
 
 .gallery {
+  
   display: grid; /* Или flex, в зависимости от вашей верстки */
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 20px;
@@ -528,7 +529,7 @@ body {
 
 
 .swiper-button-prev, .swiper-button-next {
-    color: #007bff; /* цвет стрелок */
+  color: #F25862; /* цвет стрелок */
 }
 
 .festivals-list {
