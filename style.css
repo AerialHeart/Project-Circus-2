@@ -39,13 +39,15 @@ body {
   
   .button {
     background-color: #F25862; /* красная кнопка */
-    color: white;
+    color: #dadada;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     border-radius: 5px; /* Скругленные углы */
     cursor: pointer;
+    -webkit-text-stroke: 0 #dadada; /*Толщина и цвет обводки */
+    
   }
   
   
@@ -140,7 +142,7 @@ body {
     right: 20px;
     padding: 10px 20px;
     background-color: #F25862;
-    color: white;
+    color: #dadada;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -166,8 +168,11 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    
-    color: white;
+    opacity: 0.5;
+    color: #F25862;
+    -webkit-text-stroke: 1px #302d2d;
+    font-size: x-large;
+
     padding: 10em 0;
   }
   
@@ -182,7 +187,7 @@ body {
     padding: 1em;
     border: 1px solid #ddd;
     border-radius: 5px;
-    background-color: white;
+    background-color: #dadada;
   }
   
   .testimonials {
@@ -193,13 +198,13 @@ body {
     border: 1px solid #ddd;
     padding: 1em;
     margin-bottom: 1em;
-    background-color: white;
+    background-color: #dadada;
   }
   
   /* Стили для footer */
   footer {
     background-color: #333;
-    color: white;
+    color: #dadada;
     text-align: center;
     padding: 1em 0;
   }
@@ -210,7 +215,7 @@ body {
     max-width: 500px; /* Максимальная ширина формы */
     margin: 2em auto; /* Центрирование формы */
     padding: 2em;
-    background-color: #fff;
+    background-color: #dadada;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Тень */
   }
@@ -237,7 +242,7 @@ body {
   
   #bookingForm button[type="submit"] {
     background-color: #F25862;
-    color: white;
+    color: #dadada;
     padding: 1em 2em;
     border: none;
     border-radius: 5px;
@@ -406,7 +411,7 @@ body {
     display: inline-block;
     padding: 1em 2em;
     background-color: #F25862;
-    color: white;
+    color: #dadada;
     text-decoration: none;
     border-radius: 5px;
     cursor: pointer;
@@ -436,46 +441,6 @@ body {
     margin-top: 5px;
   }
   
-/* ... (предыдущий код) ... */
-
-/* .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 20px;
-    padding: 20px;
-  }
-  
-  .gallery-item {
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .gallery img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .gallery video {
-    max-width: auto;
-    height: 100%;
-  }
-
-
-.swiper {
-    width: 100%;
-    height: 300px; /* Настройте высоту по необходимости *
-} 
-
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-} */
-
 .gallery {
   
   display: grid; /* Или flex, в зависимости от вашей верстки */
@@ -494,7 +459,7 @@ body {
 }
 
 
-.gallery img, .gallery video {
+.gallery img {
   position: absolute;
   top: 0;
   left: 0;
@@ -504,6 +469,49 @@ body {
   object-position: center center; /* Центрируем изображение/видео внутри контейнера */
 }
 
+.gallery video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Обрезаем, сохраняя пропорции */
+  object-position: center center; /* Центрируем изображение/видео внутри контейнера */
+}
+
+.galleryy {
+  display: flex; /* Или flex, в зависимости от вашей верстки */
+  padding: 20px;
+  justify-content: center; /* Центрирование по горизонтали */
+  align-items: center; /* Центрирование по вертикали */
+}
+
+.galleryy-item { /* Этот класс предполагается в вашей HTML-разметке */
+  width: 1fr; /* Занимаем всю доступную ширину */
+  max-width: 600px; /* Максимальная ширина (для адаптивности) */
+  position: relative; /* Для абсолютного позиционирования внутри */
+  padding-bottom: 177.77%; /* Соотношение сторон 16:9 */
+}
+
+
+.galleryy img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Обрезаем, сохраняя пропорции */
+  object-position: center center; /* Центрируем изображение/видео внутри контейнера */
+}
+
+.galleryy video {
+  position: fixed;
+  width: 31.4%;
+  height: 100%;
+  display: block;
+  margin: auto;
+  object-fit: cover; /* Обрезаем, сохраняя пропорции */
+}
 
 /* Если используете Swiper: */
 .swiper {
@@ -511,16 +519,25 @@ body {
 }
 
 .swiper-slide {
- width: 100%;
  position: relative; /* Для абсолютного позиционирования внутри */
  padding-bottom: 56.25%; /* Соотношение сторон 16:9 (настройте, если нужно другое) */
 }
 
-.swiper-slide img, .swiper-slide video {
-  position: absolute;
+.swiper-slide img
+{
+  position: flex;
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+.swiper-slide video 
+{
+  position: flex;
+  right: 0;
+  left: 0;
   height: 100%;
   object-fit: cover;
   object-position: center center;
