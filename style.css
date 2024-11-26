@@ -6,7 +6,7 @@ body {
     line-height: 1.6; /* Улучшаем читаемость */
     background-color: #f4f4f4; /* Светло-серый фон */
     color: #333; /* Темно-серый текст */
-  }
+   }
   
   h1, h2, h3 {
     font-family: "Vollda-Bold";
@@ -479,7 +479,7 @@ body {
 .gallery {
   
   display: grid; /* Или flex, в зависимости от вашей верстки */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 50%));
   grid-gap: 20px;
   padding: 20px;
   justify-content: center; /* Центрирование по горизонтали */
@@ -529,7 +529,7 @@ body {
 
 
 .swiper-button-prev, .swiper-button-next {
-  color: #F25862; /* цвет стрелок */
+  color: #F25862 !important; /* цвет стрелок */
 }
 
 .festivals-list {
