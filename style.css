@@ -170,7 +170,7 @@ body {
     background-position: center;
     box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.45);
     color: #F25862;
-    -webkit-text-stroke: 1px #302d2d;
+    -webkit-text-stroke: 0.5px #302d2d;
     font-size: x-large;
 
     padding: 10em 0;
