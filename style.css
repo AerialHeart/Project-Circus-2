@@ -56,9 +56,9 @@ body {
     background-color: #8a8585; /* Серый фон header */
     padding: 4em 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.5); /* Тень */
-    background: url("fons/alya.png"), url("fons/any.png"), url("fons/Софиты_прав.png"), url("fons/Софиты_лев.png"), url("icons/logo.png"), url("fons/Свет_лев.png"), url("fons/Свет_прав.png"), linear-gradient(to right bottom, rgba(102, 102, 102, 1), rgba(200, 200, 200, 1));
-    background-repeat: no-repeat;
-    background-size: contain, contain, contain, contain, contain, cover, cover;
+    background: url("fons/alya.png"), url("fons/any.png"), url("fons/sof_right.png"), url("fons/sof_left.png"), url("icons/logo.png"), url("fons/light_left.png"), url("fons/light_right.png"), url("fons/voile.png"), linear-gradient(to right bottom, rgba(102, 102, 102, 1), rgba(200, 200, 200, 1));
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat, no-repeat;
+    background-size: contain, contain, contain, contain, contain, cover, cover, contain;
     background-position: right, left, right 2em, left 2em, center 0.8em, left, right;
   }
   
@@ -75,7 +75,7 @@ body {
     top: 100%;
     left: 6cap;
     width: 100%;
-    background-color: #fff;
+    background-color: #dadada;
     display:block;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
@@ -118,7 +118,7 @@ body {
       top: 100%;
       left: 0;
       width: 100%;
-      background-color: #fff;
+      background-color: #dadada;
       text-align: center;
       display: none;
     }
@@ -157,7 +157,9 @@ body {
   /* Стили для main */
   main {
     padding: 2em;
+    
     background: linear-gradient(to right bottom, rgba(120, 120, 120, 1), rgba(200, 200, 200, 1));
+    background: url("fons/voile.png");
   }
   
   
